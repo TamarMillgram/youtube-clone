@@ -1,7 +1,9 @@
 import React from 'react'
 
-export function Player() {
+export function Player({ url }) {
   return (
-    <div>player</div>
+    <iframe width="100%" height="100%" src={`https://www.youtube.com/embed/${url}?autoplay=1`}
+      frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen>
+    </iframe>
   )
 }

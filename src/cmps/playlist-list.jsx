@@ -1,7 +1,17 @@
 import React from 'react'
+import { PlaylistPreview } from './playlist-preview'
 
-export function PlaylistList() {
+export function PlaylistList({ renderVideoPlayer, videos }) {
+  console.log(videos)
+  if (!videos?.length) return
   return (
-    <div>playlist-list</div>
+    <ul>
+      {videos.map((video, idx) => (
+        <li key={idx}>
+          <PlaylistPreview video={video} renderVideoPlayer={renderVideoPlayer} />
+        </li>
+      ))}
+      <hr />
+    </ul>
   )
 }
