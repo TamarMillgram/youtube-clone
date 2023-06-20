@@ -3,17 +3,17 @@ import React from 'react'
 export function Home() {
   return (
     <div>
-      <main class="main-content">
-        <section class="video-list">
+      <main className="main-content">
+        <section className="video-list">
           <ul>
             {
             }
           </ul>
         </section>
-        <section class="video-player">
+        <section className="video-player">
         </section>
       </main>
-      <section class="wikipedia">
+      <section className="wikipedia">
       </section>
     </div>
   )
