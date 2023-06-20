@@ -9,21 +9,6 @@ export const weTubeService = {
     askVideo
 }
 
-// async function askVideo(value) {
-//     try {
-//         if (gYouTubeCache[value]) return gYouTubeCache[value]
-//         const video = await axios.get(`https://www.googleapis.com/youtube/v3/search?part=snippet&videoEmbeddable=true&type=video&key=${API_KEY}&q=${value}`)
-//         gYouTubeCache[value] = video.data.items
-//         storageService.saveToStorage(youtubeDB, gYouTubeCache)
-//         return video.data.items
-//     } catch (err) {
-//         console.log(err)
-//         throw err
-//     } finally {
-//         console.log('After Youtube service')
-//     }
-// }
-
 async function askVideo(value) {
     console.log(value)
     if (gYouTubeCache[value]) return gYouTubeCache[value];
