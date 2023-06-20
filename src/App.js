@@ -13,19 +13,18 @@ import { AppFooter } from './cmps/app-footer';
 function App() {
   return (
     // <Provider store={store}>
-    <Provider>
-      <Router>
-        <section className="main-layout app">
-          <AppHeader />
-          <main>
-            <Routes>
-              <Route element={<Home />} path="/" />
-            </Routes>
-          </main>
-          <AppFooter />
-        </section>
-      </Router>
-    </Provider>
+    <Router>
+      <section className="main-layout app">
+        <AppHeader />
+        <main>
+          <Routes>
+            <Route element={<Home />} path="/" />
+          </Routes>
+        </main>
+        <AppFooter />
+      </section>
+    </Router>
+    // </Provider>
   )
 }
 
