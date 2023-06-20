@@ -1,4 +1,13 @@
-// Views
+// Basics
+@import "basics/base";
 
+
+// Views
+@import "views/home";
 
 // Cmps
+@import "cmps/app-header";
+@import "cmps/playlist-list";
+@import "cmps/playlist-preview";
+@import "cmps/player";
+@import "cmps/app-footer";
