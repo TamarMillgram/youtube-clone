@@ -25,6 +25,7 @@ export const weTubeService = {
 // }
 
 async function askVideo(value) {
+    console.log(value)
     if (gYouTubeCache[value]) return gYouTubeCache[value];
 
     try {
@@ -32,7 +33,6 @@ async function askVideo(value) {
         const videoItems = response.data.items;
         gYouTubeCache[value] = videoItems;
         storageService.saveToStorage(youtubeDB, gYouTubeCache);
-        console.log(videoItems);
         return videoItems;
     } catch (err) {
         console.log(err);

@@ -1,18 +1,20 @@
 import React from 'react'
+import { useNavigate } from "react-router-dom";
 
 export function AppHeader() {
 
-  function onSearchValue() {
-  }
+  const navigate = useNavigate()
 
+  function onClickLogo() {
+    navigate('/')
+  }
 
   return (
     <div>
       <nav className="main-nav">
         <ul>
-          <li className="logo">
+          <li className="logo" onClick={onClickLogo}>
             <h1>We<span>Tube</span></h1>
-            <p className="slogan">so watch and learn!</p>
           </li>
         </ul>
       </nav>
